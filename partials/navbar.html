@@ -7,7 +7,10 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">kayfabe</a>
+			<a class="navbar-brand" href="#">
+				<span ng-bind="options.name"></span>
+				<span ng-bind="' v' + options.version" ng-if="options.version"></span>
+			</a>
     	</div>
 		<div class="collapse navbar-collapse" id="navbar-collapse">
 			<ul class="nav navbar-nav">
