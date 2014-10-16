@@ -2,6 +2,11 @@
     "tutorial": "tutorials/kayfabe.md",
     "standaloneTutorials": [
         {
+            "name": "Commenting",
+            "description": "How to write comments that will be parsed by kayfabe.",
+            "location": "tutorials/standalone/commenting.md"
+        },
+        {
             "name": "Theming",
             "description": "Changing the look and functionality of your documentation.",
             "location": "tutorials/standalone/theming.md"
