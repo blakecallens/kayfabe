@@ -2,6 +2,8 @@
 
 ### Documentation is data, and JavaScript can delineate that data into the templates of a responsive, single page application. That's what kayfabe is here to do.
 
+[Check out the demo](http://blakecallens.github.io/kayfabe)
+
 ---
 
 ## Installing kayfabe
