@@ -1,8 +1,3 @@
-# kayfabe
-#### Themeable documentation generator using AngularJS and Bootstrap
-
----
-
 ### Auto-generated documentation doesn't need to be split up into a heap of static HTML files.
 
 ### Documentation is data, and JavaScript can delineate that data into the templates of a responsive, single page application. That's what kayfabe is here to do.
