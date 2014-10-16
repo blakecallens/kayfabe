@@ -1,6 +1,6 @@
 {
   "name": "kayfabe",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Themeable documentation generator using AngularJS and Bootstrap",
   "homepage": "http://blakecallens.github.io/kayfabe",
   "author": {
