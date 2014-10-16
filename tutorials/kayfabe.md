@@ -15,6 +15,7 @@ The *kayfabe.json* file contains the configuration for the documentation. If you
 The *kayfabe.json* should exist in the main directory of your application. It can hold the following values:
 
 * **output**: the folder location to output documentation to.
+* **logo**: the file location of a logo image (optional).
 * **template**: the folder location of the output template.
 * **tutorial**: absolute or relative location of the application's tutorial file.
 * **standaloneTutorials**: array of standalone markdown tutorial objects with the following values:
