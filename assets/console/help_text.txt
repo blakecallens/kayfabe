@@ -1,0 +1,9 @@
+^version^
+
+Themeable documentation generator using AngularJS and Bootstrap
+
+Usage: kayfabe <options>
+
+Common Options:
+  -v, --version: Display the current installed version
+  -h, --help: Display this help

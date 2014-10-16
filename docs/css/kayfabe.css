@@ -1,0 +1,56 @@
+a {
+	cursor: pointer;
+}
+
+h1, h2, h3, h4, h5 {
+	margin-top: 0;
+}
+
+code {
+	white-space: pre-wrap;
+}
+
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	margin: 0 auto -3em;
+}
+
+#push {
+	height: 3em
+}
+
+.logo {
+	max-height: 12em;
+}
+
+.tab-pane {
+	padding: 1em 0;
+}
+
+.method {
+	margin-bottom: 2em;
+}
+
+.parameter {
+	margin-bottom: .5em;
+}
+
+.parameter-type {
+	margin: 0 .5em .5em 0;
+}
+
+.panel-heading p, .panel-footer p {
+	margin: .5em 0 0 0;
+}
+
+footer {
+	background-color: #EEEEEE;
+	height: 3em;
+}
+
+footer p {
+	padding-top: 1em;
+	font-size: 1em;
+	color: #666666;
+}

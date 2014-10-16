@@ -1,0 +1,21 @@
+{
+    "tutorial": "tutorials/kayfabe.md",
+    "standaloneTutorials": [
+        {
+            "name": "Theming",
+            "description": "Changing the look and functionality of your documentation.",
+            "location": "tutorials/standalone/theming.md"
+        }
+    ],
+    "fileTypes": [
+        ".js"
+    ],
+    "exclusions": [
+        ".",
+        "node_modules",
+        "assets",
+        "docs",
+        "templates",
+        "tutorials"
+    ]
+}
