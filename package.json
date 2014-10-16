@@ -2,12 +2,29 @@
   "name": "kayfabe",
   "version": "0.0.1",
   "description": "Themeable documentation generator using AngularJS and Bootstrap",
+  "homepage": "http://blakecallens.github.io/kayfabe",
+  "author": {
+    "name": "Blake Callens",
+    "email": "blake.callens@gmail.com",
+    "url": "http://blakecallens.github.io/kayfabe"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/blakecallens/kayfabe.git"
+  },
+  "bugs": {
+    "url": "https://github.com/blakecallens/kayfabe/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "keywords": ["documentation","generator","angular","angularjs","bootstrap","markdown"],
+  "preferGlobal": "true",
   "main": "lib/kayfabe.js",
   "bin": {
     "kayfabe": "lib/kayfabe.js"
   },
-  "author": "Blake Callens",
-  "license": "MIT",
   "dependencies": {
     "colors": "^1.0.2",
     "ncp": "^1.0.1",
