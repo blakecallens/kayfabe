@@ -19,10 +19,9 @@
 					<span ng-bind-html="category.htmlDescription"></span>
 				</div>
 				<div class="panel-body" ng-if="category.classes.length">
-					<h4>Classes</h4>
-					<h5 ng-repeat="class in category.classes">
+					<h4 ng-repeat="class in category.classes">
 						<a ng-href="{{'#class/' + class.name.toLowerCase()}}" ng-bind="class.name"></a>
-					</h5>
+					</h4>
 				</div>
 			</div>
 			<div ng-if="options.standaloneTutorials.length">
