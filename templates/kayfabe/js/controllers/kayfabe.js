@@ -1,6 +1,79 @@
-kayfabe.controller('kayfabeController', function($scope, $sce) {
+kayfabe.controller('kayfabeController', function($scope, $sce, $location) {
 	$scope.appStructure = ^app_structure^;
 	$scope.options = ^doc_options^;
+	$scope.searchText = '';
+
+	$scope.gotoSearch = function() {
+		if(!$scope.searchText.length) {
+			return;
+		}
+
+		$location.url('/search/' + $scope.searchText);
+	}
+
+	$scope.setSearchText = function(searchText) {
+
+	}
+
+	$scope.search = function(searchText) {
+		$scope.searchText = searchText;
+		searchText = $scope.searchText.toLowerCase().trim();
+
+		var searchResults = {
+			categories: [],
+			classes: [],
+			variables: [],
+			methods: []
+		};
+
+
+		for(var i = 0; i < $scope.appStructure.length; i++) {
+			if($scope.appStructure[i].name.toLowerCase().indexOf(searchText) > -1) {
+				var category = {
+					name: $scope.appStructure[i].name,
+					htmlDescription: $sce.trustAsHtml($scope.appStructure[i].description),
+					link: '#category/' + $scope.appStructure[i].name.toLowerCase()
+				};
+
+				searchResults.categories.push(category);
+			}
+
+			for(var j = 0; j < $scope.appStructure[i].classes.length; j++) {
+				if($scope.appStructure[i].classes[j].name.toLowerCase().indexOf(searchText) > -1) {
+					var classObject = {
+						name: $scope.appStructure[i].classes[j].name,
+						htmlDescription: $sce.trustAsHtml($scope.appStructure[i].classes[j].description),
+						link: '#class/' + $scope.appStructure[i].classes[j].name.toLowerCase()
+					}
+					searchResults.classes.push(classObject);
+				}
+
+				for(var s = 0; s < $scope.appStructure[i].classes[j].variables.length; s++) {
+					if($scope.appStructure[i].classes[j].variables[s].name.toLowerCase().indexOf(searchText) > -1) {
+						var variableObject = {
+							name: $scope.appStructure[i].classes[j].variables[s].name,
+							htmlDescription: $sce.trustAsHtml($scope.appStructure[i].classes[j].variables[s].description),
+							link: '#class/' + $scope.appStructure[i].classes[j].name.toLowerCase() + '/' + $scope.appStructure[i].classes[j].variables[s].name.toLowerCase()
+						}
+						searchResults.variables.push(variableObject)
+					}
+				}
+
+				for(s = 0; s < $scope.appStructure[i].classes[j].methods.length; s++) {
+					if($scope.appStructure[i].classes[j].methods[s].name.toLowerCase().indexOf(searchText) > -1) {
+						var method = {
+							name: $scope.appStructure[i].classes[j].methods[s].name,
+							htmlDescription: $sce.trustAsHtml($scope.appStructure[i].classes[j].methods[s].description),
+							link: '#class/' + $scope.appStructure[i].classes[j].name.toLowerCase() + '/' + $scope.appStructure[i].classes[j].methods[s].name.toLowerCase()
+						}
+						searchResults.methods.push(method)
+					}
+				}
+			}
+		}
+
+		return searchResults;
+	}
 
 	$scope.getYear = function() {
 		return (new Date()).getFullYear();

@@ -36,4 +36,9 @@ kayfabe.config(['$routeProvider', function($routeProvider) {
         controller: 'tutorialController',
         reloadOnSearch: false
     })
+    .when('/search/:query', {
+        templateUrl: 'pages/search.html',
+        controller: 'searchController',
+        reloadOnSearch: false
+    })
 }]);

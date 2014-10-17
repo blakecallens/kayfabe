@@ -1,0 +1,54 @@
+<div class="container">
+	<div class="row" style="margin-top: 1em">
+		<div class="col-md-12">
+			<h1 ng-bind="'Search Results for \'' + searchText + '\''"></h1>
+		</div>
+		<div class="col-md-12" ng-if="!searchResults.categories.length && !searchResults.classes.length && !searchResults.methods.length && !searchResults.variables.length">
+			<h2>No results found</h2>
+		</div>
+		<div class="col-md-12" ng-if="searchResults.categories.length">
+			<h2>Categories</h2>
+			<div class="panel panel-default" ng-repeat="category in searchResults.categories">
+				<div class="panel-heading">
+					<h3 style="margin: 0">
+						<a ng-href="{{category.link}}" ng-bind="category.name"></a>
+					</h3>
+					<span ng-bind-html="category.htmlDescription"></span>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12" ng-if="searchResults.classes.length">
+			<h2>Classes</h2>
+			<div class="panel panel-default" ng-repeat="class in searchResults.classes">
+				<div class="panel-heading">
+					<h3 style="margin: 0">
+						<a ng-href="{{class.link}}" ng-bind="class.name"></a>
+					</h3>
+					<span ng-bind-html="class.htmlDescription"></span>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12" ng-if="searchResults.methods.length">
+			<h2>Methods</h2>
+			<div class="panel panel-default" ng-repeat="method in searchResults.methods">
+				<div class="panel-heading">
+					<h3 style="margin: 0">
+						<a ng-href="{{method.link}}" ng-bind="method.name"></a>
+					</h3>
+					<span ng-bind-html="method.htmlDescription"></span>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12" ng-if="searchResults.variables.length">
+			<h2>Variables</h2>
+			<div class="panel panel-default" ng-repeat="variable in searchResults.variables">
+				<div class="panel-heading">
+					<h3 style="margin: 0">
+						<a ng-href="{{variable.link}}" ng-bind="variable.name"></a>
+					</h3>
+					<span ng-bind-html="variable.htmlDescription"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
